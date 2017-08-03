@@ -1,0 +1,18 @@
+{
+	"license": "MIT",
+	"require": {
+		"php": ">=5.6",
+		"krinkle/toollabs-base": "^0.8.1"
+	},
+	"require-dev": {
+		"jakub-onderka/php-parallel-lint": "0.9",
+		"mediawiki/mediawiki-codesniffer": "0.10.1"
+	},
+	"scripts": {
+		"test": [
+			"parallel-lint . --exclude vendor",
+			"phpcs . -p -s"
+		],
+		"fix": "phpcbf"
+	}
+}
